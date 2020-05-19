@@ -17,6 +17,7 @@ function [A,F,Samp_Freq,DispLen,Sample_Offset,dt] = modalest(fname,sbin,ebin)
 %   > misc. changes to file pathing code
 %   > added Displen and Sample_Offset, removed dt from output
 
+% added dt to output - Christian
 
 if ~strcmp(fname(end-3:end),'.bin')
     fname = [fname '.bin'];
