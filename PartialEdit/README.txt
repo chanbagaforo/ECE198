@@ -13,6 +13,5 @@ v1      Initial version; any changes afterwards will be noted here
         - tweaks to GetBoundaries.m and modalest.m (see comments)
 v2      - typo in plotting part
         - tweaked functionality
-v3	- added synthesize.m and modified added outputs to modalest.m - christian
 ~~~~~
 [something about standing on the shoulders of giants] - gino g.
