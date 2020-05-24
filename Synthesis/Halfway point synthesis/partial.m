@@ -14,15 +14,15 @@ file = string(file);
 path = string(path);
 
 if ~strcmp(file,"0") & ~strcmp(path,"0")
-    dBtol = 60;
-%     dBtol = inputdlg('Input dB tolerance for magnitude of partials:',...
-%         'Enter dB tolerance',...
-%         1,...
-%         {'30'}); % dB attentuation wrt max tolerance (for peak finding)
-%     dBtol = str2num(cell2mat(dBtol)); % convert to integer
-%     if isempty(dBtol) % empty case
-%         dBtol = 30;
-%     end
+%     dBtol = 60;
+    dBtol = inputdlg('Input dB tolerance for magnitude of partials:',...
+        'Enter dB tolerance',...
+        1,...
+        {'30'}); % dB attentuation wrt max tolerance (for peak finding)
+    dBtol = str2num(cell2mat(dBtol)); % convert to integer
+    if isempty(dBtol) % empty case
+        dBtol = 30;
+    end
 
     for i = 1:numel(file)
         filename = [char(path) char(file(i))];
