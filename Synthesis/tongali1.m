@@ -23,7 +23,7 @@ envelope = [[0:1/fs:delay]/delay ones(1,(2-delay*2)*fs) [(delay-1/fs):-1/fs:0]/d
 
 
 sig = sig.*envelope; %simple rise sustain fall envelope
-sig = awgn([zeros(1,fs/4) sig zeros(1,fs/4)],40);
+sig = awgn([zeros(1,fs/4) sig zeros(1,fs/4)],50);
 sig = sig/max(sig); %normalize
 
 sound(sig,fs);
