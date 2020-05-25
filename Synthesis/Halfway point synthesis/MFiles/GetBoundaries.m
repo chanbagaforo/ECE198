@@ -26,7 +26,7 @@ if fidr == -1
     error(['Cannot open file at ' filename '.']);
 end
 
-fc = 31.25;     % Minimum fc of MDProgram
+fc = 435;     % Minimum fc of MDProgram
 
 %---Read *.bin file (taken from MODFILE2.M by R.Guevara)
 TransLen = (fread(fidr,1,'int32'))/2;
