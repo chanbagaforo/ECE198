@@ -17,6 +17,8 @@ function [st,en] = GetBoundaries(filename,dBtol)
 %   > outputs to two vectors st,en where st(i) and en(i)
 %       correspond to the start/end bins of the ith partial found
 
+% added fc input - Christian
+
 if ~strcmp(filename(end-3:end),'.bin')
     error('Input must be a .bin file.');
 end
@@ -26,7 +28,19 @@ if fidr == -1
     error(['Cannot open file at ' filename '.']);
 end
 
-fc = 435;     % Minimum fc of MDProgram
+if ~strcmp(filename,"0")
+%     dBtol = 60;
+    fc = inputdlg('Input fc of partials:',...
+        'Enter fc',...
+        1,...
+        {'31.25'}); % dB attentuation wrt max tolerance (for peak finding)
+    fc = str2num(cell2mat(fc)); % convert to integer
+    if isempty(fc) % empty case
+        fc = 31.25;
+    end
+end
+
+% fc = 435;     % Minimum fc of MDProgram
 
 %---Read *.bin file (taken from MODFILE2.M by R.Guevara)
 TransLen = (fread(fidr,1,'int32'))/2;

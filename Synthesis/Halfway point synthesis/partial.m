@@ -2,6 +2,10 @@
 %   made by Frank Agsaway for his thesis
 %
 % Created by Victor Gabriel C. Garica for CoE 198 2s1920
+
+% removed plotting - Christian
+
+
 close all
 clear all
 clc
@@ -28,41 +32,43 @@ if ~strcmp(file,"0") & ~strcmp(path,"0")
         filename = [char(path) char(file(i))];
         [sbin,ebin] = GetBoundaries(filename,dBtol); % bins of partial bounds
 
-        for j = 1:numel(sbin) % per partial
-            [amp,freq,Fs,DispLen,Sample_Offset,dt] = modalest(filename,sbin(j),ebin(j));
-%                 % amp contains amplitude estimate
-%                 % freq contains frequency estimate
-%                 % Fs is the sampling frequency
-%                 % dt is [CHECK THE IMPLEMENTATION - GINO]
-%            COMMENTED OUT FOR SYNTHESIS PURPOSES
-            
-            % make time vector and correct length
-            t = (Sample_Offset:DispLen-Sample_Offset)./Fs;
-            t = t(1:min(numel(t),numel(amp)));
-            
-            tmp = strcat(file," - Partial ",num2str(j)); % title
-            fignum = figure('Name',tmp); % new figure for given partial
-            tg = uitabgroup(fignum); % tab group ui element
-            
-            tab1 = uitab(tg,'Title','Amplitude'); % tab for amplitude
-            axes('Parent',tab1);
-            plot(t,amp);
-            title('Amplitude','Interpreter','none');
-            xlabel('time [s]');
-            ylabel('magnitude, normalized');
-            
-            tab2 = uitab(tg,'Title','Frequency'); % tab for frequency
-            axes('Parent',tab2);
-            figure(fignum); 
-            plot(t,freq);
-            title('Frequency','Interpreter','none');
-            xlabel('time[s]');
-            ylabel('frequency [Hz]');
-        end
+        numel(sbin) % prints total number of partials
+        [amp,freq,Fs,DispLen,Sample_Offset,dt] = modalest(filename,sbin(numel(sbin)),ebin(numel(sbin)));
+%         for j = 1:numel(sbin) % per partial
+%             [amp,freq,Fs,DispLen,Sample_Offset,dt] = modalest(filename,sbin(j),ebin(j));
+% %                 % amp contains amplitude estimate
+% %                 % freq contains frequency estimate
+% %                 % Fs is the sampling frequency
+% %                 % dt is [CHECK THE IMPLEMENTATION - GINO]
+% %            COMMENTED OUT FOR SYNTHESIS PURPOSES
+%             
+%             % make time vector and correct length
+%             t = (Sample_Offset:DispLen-Sample_Offset)./Fs;
+%             t = t(1:min(numel(t),numel(amp)));
+%             
+%             tmp = strcat(file," - Partial ",num2str(j)); % title
+%             fignum = figure('Name',tmp); % new figure for given partial
+%             tg = uitabgroup(fignum); % tab group ui element
+%             
+%             tab1 = uitab(tg,'Title','Amplitude'); % tab for amplitude
+%             axes('Parent',tab1);
+%             plot(t,amp);
+%             title('Amplitude','Interpreter','none');
+%             xlabel('time [s]');
+%             ylabel('magnitude, normalized');
+%             
+%             tab2 = uitab(tg,'Title','Frequency'); % tab for frequency
+%             axes('Parent',tab2);
+%             figure(fignum); 
+%             plot(t,freq);
+%             title('Frequency','Interpreter','none');
+%             xlabel('time[s]');
+%             ylabel('frequency [Hz]');
+%         end
     end
 else
     disp('Analysis cancelled');
 end
 
 %clear;
-rmpath('MFiles');
+%rmpath('MFiles'); %removed - Christian

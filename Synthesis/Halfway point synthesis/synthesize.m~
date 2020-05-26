@@ -1,4 +1,5 @@
 partial
+addpath('MFiles');
 
 NperFrame = round(dt*Fs);
 Nf = length(amp);
