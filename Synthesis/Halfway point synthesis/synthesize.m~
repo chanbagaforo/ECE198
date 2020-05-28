@@ -1,5 +1,10 @@
+close all; clear all;
+%feq = [211.9 260.6 288.9 331.6 378.3 435.5 520.4 585 666.4 773.9 891 924.9];
+
+for hijk = 9:12
+    global fc;
+fc = feq(hijk)
 partial
-addpath('MFiles');
 
 NperFrame = round(dt*Fs);
 Nf = length(amp);
@@ -15,6 +20,8 @@ for j  = 1:numel(sbin) %per partial
     par = sosinterp(amp, freq, Fs, dt);
     sig = sig + par;
 end
+sig = sig/max(abs(sig));
 
 [~,name,~] = fileparts(file);
 audiowrite(char(strcat(path,name,'.wav')), sig, Fs);
+end

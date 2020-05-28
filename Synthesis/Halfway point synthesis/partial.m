@@ -5,35 +5,37 @@
 
 % removed plotting - Christian
 
-
-close all
-clear all
-clc
+%close all
+%clear all
+%clc
 
 addpath('MFiles');
 
-[file,path] = uigetfile('*.bin','Select MDA .bin file(s) to analyze',...
-    'Multiselect','on'); % file select
-file = string(file);
-path = string(path);
+% [file,path] = uigetfile('*.bin','Select MDA .bin file(s) to analyze',...
+%     'Multiselect','on'); % file select
+% file = string(file);
+% path = string(path); commented out to use values below
+global file; global path;
+    
 
 if ~strcmp(file,"0") & ~strcmp(path,"0")
-%     dBtol = 60;
-    dBtol = inputdlg('Input dB tolerance for magnitude of partials:',...
-        'Enter dB tolerance',...
-        1,...
-        {'30'}); % dB attentuation wrt max tolerance (for peak finding)
-    dBtol = str2num(cell2mat(dBtol)); % convert to integer
-    if isempty(dBtol) % empty case
-        dBtol = 30;
-    end
+   dBtol = 50;
+%     dBtol = inputdlg('Input dB tolerance for magnitude of partials:',...
+%         'Enter dB tolerance',...
+%         1,...
+%         {'30'}); % dB attentuation wrt max tolerance (for peak finding)
+%     dBtol = str2num(cell2mat(dBtol)); % convert to integer
+%     if isempty(dBtol) % empty case
+%         dBtol = 30;
+%     end
 
     for i = 1:numel(file)
         filename = [char(path) char(file(i))];
         [sbin,ebin] = GetBoundaries(filename,dBtol); % bins of partial bounds
 
-        numel(sbin) % prints total number of partials
-        [amp,freq,Fs,DispLen,Sample_Offset,dt] = modalest(filename,sbin(numel(sbin)),ebin(numel(sbin)));
+        
+        partials = numel(sbin)
+        [amp,freq,Fs,DispLen,Sample_Offset,dt] = modalest(filename,sbin(1),ebin(1));
 %         for j = 1:numel(sbin) % per partial
 %             [amp,freq,Fs,DispLen,Sample_Offset,dt] = modalest(filename,sbin(j),ebin(j));
 % %                 % amp contains amplitude estimate
@@ -71,4 +73,4 @@ else
 end
 
 %clear;
-%rmpath('MFiles'); %removed - Christian
+%rmpath('MFiles');

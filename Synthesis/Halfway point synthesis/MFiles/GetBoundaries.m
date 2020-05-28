@@ -28,17 +28,17 @@ if fidr == -1
     error(['Cannot open file at ' filename '.']);
 end
 
-if ~strcmp(filename,"0")
-%     dBtol = 60;
-    fc = inputdlg('Input fc of partials:',...
-        'Enter fc',...
-        1,...
-        {'31.25'}); % dB attentuation wrt max tolerance (for peak finding)
-    fc = str2num(cell2mat(fc)); % convert to integer
-    if isempty(fc) % empty case
-        fc = 31.25;
-    end
-end
+global fc
+% if ~strcmp(filename,"0")
+%     fc = inputdlg('Input fc of partials:',...
+%         'Enter fc',...
+%         1,...
+%         {'31.25'}); % dB attentuation wrt max tolerance (for peak finding)
+%     fc = str2num(cell2mat(fc)); % convert to integer
+%     if isempty(fc) % empty case
+%         fc = 31.25;
+%     end
+% end
 
 % fc = 435;     % Minimum fc of MDProgram
 
