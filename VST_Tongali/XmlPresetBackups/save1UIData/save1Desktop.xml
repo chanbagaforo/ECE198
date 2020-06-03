@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptPanel" id="Panel1" x="0.00000000" y="0.00000000"
+             width="568.00000000" height="320.00000000" itemColour="855638015"
+             itemColour2="855638015">
+    <Component type="ScriptLabel" id="Label1" x="25.00000000" y="25.00000000"
+               parentComponent="Panel1" width="390.00000000" height="55.00000000"
+               alignment="left" fontSize="36.00000000" text="Tongali"/>
+  </Component>
+  <Component type="ScriptPanel" id="Panel2" x="0.00000000" y="69.00000000"
+             width="568.00000000" height="200.00000000" bgColour="16777215"
+             itemColour="0" itemColour2="0" textColour="16777215">
+    <Component type="ScriptImage" id="Image1" x="134.00000000" y="40.00000000"
+               parentComponent="Panel2" width="300.00000000" height="120.00000000"
+               fileName="{PROJECT_FOLDER}tongali.png"/>
+  </Component>
+</ContentProperties>

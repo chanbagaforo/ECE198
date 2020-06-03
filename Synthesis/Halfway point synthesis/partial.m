@@ -11,23 +11,23 @@
 
 addpath('MFiles');
 
-% [file,path] = uigetfile('*.bin','Select MDA .bin file(s) to analyze',...
-%     'Multiselect','on'); % file select
-% file = string(file);
-% path = string(path); commented out to use values below
-global file; global path;
+[file,path] = uigetfile('*.bin','Select MDA .bin file(s) to analyze',...
+    'Multiselect','on'); % file select
+file = string(file);
+path = string(path);
+% global file; global path;
     
 
 if ~strcmp(file,"0") & ~strcmp(path,"0")
-   dBtol = 50;
-%     dBtol = inputdlg('Input dB tolerance for magnitude of partials:',...
-%         'Enter dB tolerance',...
-%         1,...
-%         {'30'}); % dB attentuation wrt max tolerance (for peak finding)
-%     dBtol = str2num(cell2mat(dBtol)); % convert to integer
-%     if isempty(dBtol) % empty case
-%         dBtol = 30;
-%     end
+%    dBtol = 50;
+    dBtol = inputdlg('Input dB tolerance for magnitude of partials:',...
+        'Enter dB tolerance',...
+        1,...
+        {'30'}); % dB attentuation wrt max tolerance (for peak finding)
+    dBtol = str2num(cell2mat(dBtol)); % convert to integer
+    if isempty(dBtol) % empty case
+        dBtol = 30;
+    end
 
     for i = 1:numel(file)
         filename = [char(path) char(file(i))];
