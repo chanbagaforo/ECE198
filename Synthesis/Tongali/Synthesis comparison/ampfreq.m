@@ -11,13 +11,16 @@ close all; clear all;
 % - removed pitch
 % - converted outputs to fig to be able to analyze in future
 
-for hijk = 1:12
+
 %% original signal
 % plot amplitude and frequency 
 
-path = string('/Users/christianbagaforo/Desktop/ECE198/Synthesis/Tongali/Trial synthesis 2 (tongali)/Final audio files/original/');
-file = string(strcat(num2str(hijk),'.wav'));
-[~,name,~] = fileparts(file);
+[file,path] = uigetfile('*.wav','Select WAV file(s) to analyze',...
+    'Multiselect','on'); % file select
+
+file = string(file);
+path = string(path);
+[~,name,~] = fileparts(file(i));
 
 % [file,path] = uigetfile('*.wav','Select .wav file to analyze');%,...
 % %     'Multiselect','on'); % file select
