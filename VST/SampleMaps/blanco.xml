@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<samplemap ID="blanco" RRGroupAmount="1.00000000" MicPositions=";" SaveMode="2">
+  <sample Root="0" LoKey="0" HiKey="0" LoVel="0" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Kolitong/1_A1_fc_50_adsr.wav" Duplicate="1"
+          MonolithOffset="0" MonolithLength="114688" SampleRate="44100.00000000"/>
+</samplemap>

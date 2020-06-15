@@ -1,0 +1,2 @@
+MIRtoolbox	_Zero-crossingrate_Mean	_Spectralcentroid_Mean	_AttackTime_Mean	_AttackSlope_Mean	
+C:\Users\JhaezminneManuel\Desktop\ECE198-master\Synthesis\MDA\FINALSYNTH\F4_fc_498_expt.wav	446.163760	2765.596220	0.020408	47.220645	

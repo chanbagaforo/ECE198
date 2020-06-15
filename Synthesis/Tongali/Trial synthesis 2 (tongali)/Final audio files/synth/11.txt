@@ -1,0 +1,2 @@
+MIRtoolbox1.7.2	_Zero-crossingrate_Mean	_Spectralcentroid_Mean	_Temporalcentroid_Mean	_AttackSlope_Mean	
+/Users/christianbagaforo/Desktop/ECE198/Synthesis/Tongali/Trialsynthesis2(tongali)/Finalaudiofiles/synth/11.wav	893.527259	1635.982825	NaN	8.874003	

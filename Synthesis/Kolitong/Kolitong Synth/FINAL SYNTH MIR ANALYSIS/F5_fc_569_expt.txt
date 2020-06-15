@@ -1,0 +1,2 @@
+MIRtoolbox	_Zero-crossingrate_Mean	_Spectralcentroid_Mean	_AttackTime_Mean	_AttackTime_Std	_AttackTime_Slope	_AttackTime_PeriodFreq	_AttackTime_PeriodAmp	_AttackTime_PeriodEntropy	_AttackSlope_Mean	_AttackSlope_Std	_AttackSlope_Slope	_AttackSlope_PeriodFreq	_AttackSlope_PeriodAmp	_AttackSlope_PeriodEntropy	
+C:\Users\JhaezminneManuel\Desktop\ECE198-master\Synthesis\MDA\FINALSYNTH\F5_fc_569_expt.wav	636.968566	4368.466767	0.020397	0.004249	1.414214	NaN	NaN	0.908422	28.755188	37.805972	-1.414214	NaN	NaN	0.219450	

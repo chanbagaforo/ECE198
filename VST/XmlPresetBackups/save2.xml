@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Processor Type="SynthChain" ID="save2" Bypassed="0" Gain="1.00000000" Balance="0.00000000"
+           VoiceLimit="64.00000000" KillFadeTime="20.00000000" IconColour="0"
+           packageName="" BuildVersion="650">
+  <ChildProcessors>
+    <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+      <ChildProcessors>
+        <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
+          <ChildProcessors/>
+          <Content>
+            <Control type="ScriptLabel" id="Label2" value="Instrument:"/>
+            <Control type="ScriptLabel" id="Label1" value="Kolitong"/>
+            <Control type="ScriptComboBox" id="ComboBox1" value="3.00000000"/>
+          </Content>
+          <UIData Source="save2UIData"/>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.00000000">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="1" Intensity="0.00000000">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="EffectChain" ID="FX" Bypassed="0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="StreamingSampler" ID="Sampler1" Bypassed="0" Gain="1.00000000"
+               Balance="0.00000000" VoiceLimit="256.00000000" KillFadeTime="20.00000000"
+               IconColour="0" PreloadSize="8192.00000000" BufferSize="4096.00000000"
+               VoiceAmount="256.00000000" SamplerRepeatMode="3.00000000" RRGroupAmount="1.00000000"
+               PitchTracking="1.00000000" OneShot="0.00000000" CrossfadeGroups="0.00000000"
+               Purged="0.00000000" Reversed="0.00000000" NumChannels="1" UseStaticMatrix="0.00000000"
+               Group0Table="" Group1Table="" Group2Table="" Group3Table="" Group4Table=""
+               Group5Table="" Group6Table="" Group7Table="" SampleMapID="blanko">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.00000000">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope1" Bypassed="0" Monophonic="0.00000000"
+                       Retrigger="1.00000000" Intensity="1.00000000" Attack="5.00000000"
+                       Release="10.00000000" LinearMode="1.00000000">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.00000000">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.00000000">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Sample Start" Bypassed="0" Intensity="1.00000000">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Group Fade" Bypassed="0" Intensity="1.00000000">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+      <channels>
+        <channelData enabled="1" level="0.00000000" suffix=""/>
+      </channels>
+    </Processor>
+    <Processor Type="StreamingSampler" ID="Sampler2" Bypassed="0" Gain="1.00000000"
+               Balance="0.00000000" VoiceLimit="256.00000000" KillFadeTime="20.00000000"
+               IconColour="0" PreloadSize="8192.00000000" BufferSize="4096.00000000"
+               VoiceAmount="256.00000000" SamplerRepeatMode="3.00000000" RRGroupAmount="1.00000000"
+               PitchTracking="1.00000000" OneShot="1.00000000" CrossfadeGroups="0.00000000"
+               Purged="0.00000000" Reversed="0.00000000" NumChannels="1" UseStaticMatrix="0.00000000"
+               Group0Table="" Group1Table="" Group2Table="" Group3Table="" Group4Table=""
+               Group5Table="" Group6Table="" Group7Table="" SampleMapID="kolitong">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.00000000">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope2" Bypassed="0" Monophonic="0.00000000"
+                       Retrigger="1.00000000" Intensity="1.00000000" Attack="5.00000000"
+                       Release="10.00000000" LinearMode="1.00000000">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.00000000">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.00000000">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Sample Start" Bypassed="0" Intensity="1.00000000">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="Group Fade" Bypassed="0" Intensity="1.00000000">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+      <channels>
+        <channelData enabled="1" level="0.00000000" suffix=""/>
+      </channels>
+    </Processor>
+  </ChildProcessors>
+  <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+  <macro_controls>
+    <macro name="Macro 1" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 2" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 3" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 4" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 5" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 6" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 7" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 8" value="0.0" midi_cc="-1"/>
+  </macro_controls>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Processor>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<samplemap ID="blanko" RRGroupAmount="1.00000000" MicPositions=";" SaveMode="2">
+  <sample Root="0" LoKey="0" HiKey="0" LoVel="0" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}Tongali/1.wav" Duplicate="1" MonolithOffset="0"
+          MonolithLength="86016" SampleRate="44100.00000000"/>
+</samplemap>
