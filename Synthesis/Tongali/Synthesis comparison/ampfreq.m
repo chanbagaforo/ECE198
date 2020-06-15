@@ -20,7 +20,7 @@ close all; clear all;
 
 file = string(file);
 path = string(path);
-[~,name,~] = fileparts(file(i));
+[~,name,~] = fileparts(file);
 
 % [file,path] = uigetfile('*.wav','Select .wav file to analyze');%,...
 % %     'Multiselect','on'); % file select
@@ -85,13 +85,13 @@ saveas(fig3, [char(path) char(name) ' - Spectrogram'], 'fig')
 %% synthesized
 % plot amplitude and frequency 
  
-path = string('/Users/christianbagaforo/Desktop/ECE198/Synthesis/Tongali/Trial synthesis 2 (tongali)/Final audio files/synth/');
+%path = string('/Users/christianbagaforo/Desktop/ECE198/Synthesis/Tongali/Trial synthesis 2 (tongali)/Final audio files/synth/');
 
-% [file,path] = uigetfile('*.wav','Select .wav file of synthesis to analyze');%,...
-% %     'Multiselect','on'); % file select
-% file = string(file);
-% path = string(path);
-% [~,name,~] = fileparts(file);
+[file,path] = uigetfile('*.wav','Select .wav file of synthesis to analyze');%,...
+%     'Multiselect','on'); % file select
+file = string(file);
+path = string(path);
+[~,name,~] = fileparts(file);
 
 [y,Fs] = audioread([char(path) char(file)]);
 
@@ -180,4 +180,4 @@ hold off;
 saveas(fig3, [char(path) char(name) ' - Superimposed Frequency Domain'], 'fig')
 
 close all; clear all;
-end
+%end

@@ -1,0 +1,2 @@
+MIRtoolbox1.7.2	_Zero-crossingrate_Mean	_Spectralcentroid_Mean	_Temporalcentroid_Mean	_AttackSlope_Mean	_AttackSlope_Std	_AttackSlope_Slope	_AttackSlope_PeriodFreq	_AttackSlope_PeriodAmp	_AttackSlope_PeriodEntropy	
+/Users/christianbagaforo/Desktop/ECE198/Synthesis/Tongali/Trialsynthesis2(tongali)/Finalaudiofiles/synth/10.wav	777.333837	998.060990	NaN	6.222238	5.955896	-1.522291	NaN	NaN	0.737615	

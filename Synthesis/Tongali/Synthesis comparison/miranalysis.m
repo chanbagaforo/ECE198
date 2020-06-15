@@ -9,11 +9,12 @@ if ~strcmp(file,"0") & ~strcmp(path,"0")
             filename = [char(path) char(file(i))];
 
             a = mirzerocross(filename);
-            b = mircentroid(filename);
-            c = mirattacktime(filename);
+            b = mircentroid(mirspectrum(filename));
+            c = mircentroid(mirenvelope(filename,'Center'));
+            d = mirattackslope(filename);
 
             [~,name,~] = fileparts(file(i));
-            mirexport(char(strcat(path,name,'.txt')),a,b,c);
+            mirexport(char(strcat(path,name,'.txt')),a,b,c,d);
     end
 else
     disp('Analysis Cancelled')
